@@ -143,4 +143,152 @@ function avaliarProjeto(funcionalidade, design, documentacao) {
 }
 
 
-avaliarProjeto(9, 8, 10); // Saída: Excelente
+avaliarProjeto(9, 8, 10);
+
+//ex-11
+
+let media=  2
+let frequencia= 75
+
+if(media >=6 && frequencia>= 75){
+    console.log("aprovado")
+} else if( media>=4 && media<=5.9){
+    console.log("recuperação")
+} else if(media<3.9){
+     console.log(`reprovado`)
+}
+
+
+//ex-12
+
+let possuiCartao = prompt("Você possui cartão de acesso? (sim/não)").toLowerCase();
+
+if (possuiCartao === "sim") {
+    let cartaoAtivo = prompt("O cartão está ativo? (sim/não)").toLowerCase();
+    if (cartaoAtivo === "sim") {
+        console.log("Acesso permitido.");
+    } else {
+        console.log("Acesso negado.");
+    }
+} else {
+    console.log("Acesso negado.");
+}
+
+
+//ex-13
+
+let recursosSolicitados = parseInt(prompt("Quantos recursos você deseja solicitar?"));
+let recursosDisponiveis = 10; // Exemplo de recursos disponíveis
+
+if (recursosSolicitados <= recursosDisponiveis) {
+    console.log("Pedido atendido.");
+} else {
+    console.log("Necessário fazer uma reserva para uma data futura.");
+}
+
+//ex-14
+
+let tipoDisciplina = prompt("Você deseja se matricular em uma disciplina obrigatória ou eletiva?").toLowerCase();
+
+if (tipoDisciplina === "obrigatória") {
+    console.log("Você foi matriculado na disciplina obrigatória.");
+} else if (tipoDisciplina === "eletiva") {
+    let vagasDisponiveis = prompt("Há vagas disponíveis? (sim/não)").toLowerCase();
+    if (vagasDisponiveis === "sim") {
+        console.log("Você foi matriculado na disciplina eletiva.");
+    } else {
+        console.log("Você está na lista de espera para a disciplina eletiva.");
+    }
+} else {
+    console.log("Tipo de disciplina inválido.");
+}
+
+//ex-15
+
+let nota1 = 7; // Exemplo de notas
+let nota2 = 8;
+let nota3 = 5;
+
+let media2 = (nota1 + nota2 + nota3) / 3;
+
+if (media2 >= 6) {
+    console.log("Aprovado");
+    if (media2 > 8) {
+        console.log("Parabéns! Você teve um desempenho destacado.");
+    }
+} else if (media2 >= 4) {
+    console.log("Recuperação");
+} else {
+    console.log("Reprovado");
+}
+
+//ex-16
+
+let infrações = [3, 2, 5]; // Exemplo de pontos por infrações
+let totalPontos = infrações.reduce((acc, pontos) => acc + pontos, 0);
+
+if (totalPontos >= 20) {
+    console.log("Suspensão da carteira.");
+} else {
+    console.log(`Você ainda pode acumular ${20 - totalPontos} pontos antes do limite.`);
+}
+
+//ex-17
+
+let valorEmprestimo = parseFloat(prompt("Informe o valor do empréstimo:"));
+let numeroParcelas = parseInt(prompt("Informe o número de parcelas:"));
+let taxaJuros = 0.05; // Exemplo de taxa de juros
+
+let valorFinal = valorEmprestimo * Math.pow((1 + taxaJuros), numeroParcelas);
+console.log(`O valor total ao final do empréstimo será R$ ${valorFinal.toFixed(2)}.`);
+
+//ex-18
+
+let nota11 = 6;
+let nota22 = 7;
+let nota33 = 8;
+let atividadesExtras = true; // Exemplo de atividades extras completadas
+
+let media3 = (nota11 + nota22 + nota33) / 3;
+if (atividadesExtras) {
+    media3 *= 1.05; // Bônus de 5%
+}
+
+if (media3 >= 6) {
+    console.log("Aprovado");
+} else if (media3 >= 4) {
+    console.log("Recuperação");
+} else {
+    console.log("Reprovado")
+    }
+
+    //ex-19
+
+    
+    let qualidade = 8; // Exemplo de qualidade de 0 a 10
+    let preco = 100; // Exemplo de preço
+    
+    if (qualidade >= 8 && preco <= 100) {
+        console.log("Ótimo Custo-Benefício");
+    } else if (qualidade >= 6) {
+        console.log("Bom");
+    } else if (qualidade >= 4) {
+        console.log("Regular");
+    } else {
+        console.log("Ruim");
+    }
+
+    //ex-20
+
+    let consumo = parseFloat(prompt("Informe o consumo de energia em kWh:"));
+let valorTotal;
+
+if (consumo <= 100) {
+    valorTotal = consumo * 0.50; // Exemplo de tarifa
+} else if (consumo <= 200) {
+    valorTotal = consumo * 0.75;
+} else {
+    valorTotal = consumo * 1.00;
+}
+
+console.log(`O valor total da conta de energia é R$ ${valorTotal.toFixed(2)}.`);
